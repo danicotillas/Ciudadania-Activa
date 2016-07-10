@@ -10,29 +10,30 @@ else { $epi_class = "post"; }
 <div id="epi" class="container-full epi-<?php echo $epi_class; ?>">
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-2 col-md-offset-5 col-sm-4 col-sm-offset-4 col-xs-4 col-xs-offset-4">
-			<img class="img-responsive" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-logo-detalle.png" alt="<?php echo QUINCEM_BLOGNAME; ?>" />
-		</div>
-	</div><!-- .row -->
+	<!-- .row -->
 </div><!-- .container -->
 </div><!-- .container-full -->
 
 <div id="trasepi" class="container-full">
 <div class="container">
 	<div class="row patrocina">
-	<div class="col-md-4 col-md-offset-4">
+	<div class="col-md-6 col-md-offset-3">
 		<ul class="list-inline">
-			<li><img class="patrocina-sec" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-mozilla.png" alt="Mozilla Foundation" /></li>
-			<li><img class="patrocina-main" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-15muebles.png" alt="Proyecto 15 muebles" /></li>
-			<li><img class="patrocina-sec" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-mncars.png" alt="Museo Nacional Centro de Arte Reina Sofia" /></li>
+			<!--<li><img class="patrocina-sec" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-mozilla.png" alt="Mozilla Foundation" /></li>-->
+            <p class="row explica">Basado en un proyecto de: </p>
+            
+		
+		<li><a href="http://ciudad-escuela.org"><img class="patrocina-main" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-logo-detalle.png" alt="<?php echo QUINCEM_BLOGNAME; ?>" /></a></li>
+		
+			<li><a href="http://www.15muebles.org"><img class="patrocina-main" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-15muebles.png" alt="Proyecto 15 muebles" /></a></li>
+			<li><a href="http://museoreinasofia.es/"><img class="patrocina-sec" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-mncars.png" alt="Museo Nacional Centro de Arte Reina Sofia" /></a></li>
 		</ul>
 	</div>
 	</div><!-- .row -->
 	<div class="row explica">
 	<div class="col-md-8 col-md-offset-2">
-		<div><p><strong>El contenido de Ciudad Escuela</strong>, a menos que se indique lo contrario, está disponible para su uso bajo las condiciones de la licencia <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>. <strong>El código de la web de Ciudad Escuela</strong> está igualmente disponible para su uso bajo las condiciones de una licencia <a href="https://github.com/skotperez/15muebles/blob/master/LICENSE">GPL2</a>, y puede <a href="https://github.com/skotperez/15muebles">descargarse libremente</a>. La web de Ciudad Escuela funciona usando <a href="http://wordpress.org">WordPress</a>.</p>
-			<p><a href="http://openbadges.org"><img src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-openbadges.png" alt="Openbadges -- Mozilla Foundation" /></a></p>
+		<div><p><strong>El contenido de Ciudadanía Activa</strong>, a menos que se indique lo contrario, está disponible para su uso bajo las condiciones de la licencia <a href="http://creativecommons.org/licenses/by-sa/4.0/deed.es_ES">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional</a>. <strong>El código de la web de Ciudadanía Activa</strong> está <a href="https://github.com/hacklabcbba/Ciudadania-Activa">igualmente disponible</a> para su uso bajo las condiciones de una licencia <a href="https://github.com/skotperez/15muebles/blob/master/LICENSE">GPL2</a>, y basado en el código de Ciudad Escuela que puede <a href="https://github.com/skotperez/15muebles">descargarse libremente</a>. La web de Ciudadanía Activa funciona usando <a href="http://wordpress.org">WordPress</a>.</p>
+			<!--<p><a href="http://openbadges.org"><img src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-openbadges.png" alt="Openbadges -- Mozilla Foundation" /></a></p>-->
 		</div>
 	</div>
 	</div><!-- .row -->

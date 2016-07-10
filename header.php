@@ -164,7 +164,8 @@ $band_tits = array("Descubre","Aprende","Haz","Comunidad");
 
 			<ul id="navbar-third" class="nav navbar-nav navbar-right hidden-sm">
 				<li class="navbar-socialb">
-<div class="g-follow" data-annotation="bubble" data-height="20" data-href="https://plus.google.com/104536835218787209984" data-rel="publisher"></div>
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div>
 
 <!-- Place this tag after the last widget tag. -->
 <script type="text/javascript">

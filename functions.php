@@ -180,7 +180,7 @@ function quincem_create_post_type() {
 			'not_found_in_trash' => __( 'Ningún badge en la papelera' ),
 			'parent' => __( 'Aprende' )
 		),
-		'description' => 'Estos son nuestros 15 badges: unidades de aprendizaje sobre las habilidades, saberes y herramientas que creemos importante poner en juego para construir una ciudad mejor.',
+		'description' => 'A través de los Badges (Parches) irás aprendiendo distintas cosas: habilidades, saberes y herramientas que creemos importante poner en juego para construir una ciudad mejor.',
 		'has_archive' => false,
 		'public' => true,
 		'publicly_queryable' => true,
@@ -211,7 +211,7 @@ function quincem_create_post_type() {
 			'not_found_in_trash' => __( 'Ningún itinerario en la papelera' ),
 			'parent' => __( 'Descubre' )
 		),
-		'description' => 'Estos son nuestros 10 itinerarios pedagógicos. Cada itinerario ensaya un recorrido práctico y teórico sobre otras formas de participación: imaginarios, herramientas, juegos y lenguajes urbanos que nos gustaría sirvieran para empoderar otras políticas.',
+		'description' => 'Los itinerarios pedagógicos ensayan un recorrido práctico y teórico sobre otras formas de participación: imaginarios, herramientas, juegos y lenguajes que queremos que sirvan para acercarnos de otra manera a nuestras realidades.',
 		'has_archive' => false,
 		'public' => true,
 		'publicly_queryable' => true,
@@ -242,7 +242,7 @@ function quincem_create_post_type() {
 			'not_found_in_trash' => __( 'Ningún actividad en la papelera' ),
 			'parent' => __( 'Haz' )
 		),
-		'description' => 'Echa un vistazo a todas las actividades en las que puedes inscribirte y participar: desde talleres de auto-construcción a seminarios teóricos, pasando por debates virtuales o recorridos de abastecimiento.',
+		'description' => 'Echa un vistazo a todas las actividades en las que puedes inscribirte y participar: desde talleres de auto-construcción a seminarios teóricos, pasando por debates virtuales o acciones colaborativas.',
 		'has_archive' => false,
 		'public' => true,
 		'publicly_queryable' => true,

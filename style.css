@@ -205,7 +205,7 @@ body { padding-top: 50px; }
 	display: block;
 	background-image: url('images/quincem-bg-band-border-black.png');
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: 0px 15px;
 	background-size: contain;
 }
 .border-band-white {

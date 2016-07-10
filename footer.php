@@ -46,5 +46,8 @@ else { $epi_class = "post"; }
 //echo "<div style='display: none;'>".get_num_queries()."</div>";
 wp_footer(); ?>
 
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=martadero"></script>
+
 </body><!-- end body as main container -->
 </html>

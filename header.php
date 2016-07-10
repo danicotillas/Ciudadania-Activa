@@ -154,9 +154,9 @@ $band_tits = array("Descubre","Aprende","Haz","Comunidad");
 			</ul>
 			<ul id="navbar-sec" class="nav navbar-nav navbar-left">
 				<?php if ( $wp_query->query_vars['pagename'] == 'about' ) { ?>
-					<li class="active"><a class="border-band-black" href="">About</a></li>
+					<li class="active"><a class="border-band-black" href="">Sobre</a></li>
 				<?php } else { ?>
-					<li><a class="border-band-black" href="/about">About</a></li>
+					<li><a class="border-band-black" href="/about">Sobre</a></li>
 				<?php } ?>
 					<li class="navbar-faq"><a href="/preguntas-frecuentes">FAQ</a></li>
 					<li class="navbar-blog"><a href="/blog">Blog</a></li>

@@ -163,6 +163,7 @@ $band_tits = array("Descubre","Aprende","Haz","Comunidad");
 			</ul>
 
 			<ul id="navbar-third" class="nav navbar-nav navbar-right hidden-sm">
+            <div style="float: left;margin-top: 15px;margin-right: 10px;">Comparte</div>
 				<li class="navbar-socialb">
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <div class="addthis_sharing_toolbox"></div>

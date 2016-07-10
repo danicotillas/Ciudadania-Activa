@@ -15,8 +15,8 @@ $rombo_classes = array("rombo col-md-2 col-md-offset-2 col-sm-2 col-sm-offset-3"
 <div class="container">
 <header class="aligncenter">
 	<div class="row hair">
-		<div class="col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
-			<img id="quincem-imago" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-imago.png" alt="<?php echo QUINCEM_BLOGNAME. " | " . QUINCEM_BLOGDESC; ?>" />
+		<div class="col-md-5 col-md-offset-3 col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+			<img id="quincem-imago" src="<?php echo QUINCEM_BLOGTHEME; ?>/images/quincem-imago-.png" alt="<?php echo QUINCEM_BLOGNAME. " | " . QUINCEM_BLOGDESC; ?>" />
 			<h1 class="hideout"><?php echo QUINCEM_BLOGNAME ?></h1>
 			<div class="hideout"><strong><?php echo QUINCEM_BLOGDESC ?></strong></div>
 		</div>

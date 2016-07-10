@@ -304,7 +304,7 @@ function quincem_create_post_type() {
 			'not_found_in_trash' => __( 'Ningún issuer en la papelera' ),
 			'parent' => __( 'Emisor de badges' )
 		),
-		'description' => 'Éste es el perfil de una de las organizaciones que emiten badges en Ciudadaní. Si te interesa alguno de ellos, puedes consultar las actividades relacionadas para conseguirlo. Si lo prefieres puedes ponerte en contacto con el emisor directamente en la sección contacto.',
+		'description' => 'Éste es el perfil de una de las organizaciones que emiten badges en Ciudadanía Activa. Si lo prefieres puedes ponerte en contacto con el emisor directamente en la sección contacto. Si te interesa ser un emisor escribe a info[a]martadero.org.',
 		'has_archive' => false,
 		'public' => true,
 		'publicly_queryable' => true,

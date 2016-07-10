@@ -57,7 +57,7 @@ if ( is_single() || is_page() && !is_front_page() ) {
 	$metadesc_tw = substr( $metadesc, 0, 200 );
 	$metatit = $term->name;
 	$metatype = "blog";
-	$metaperma = "http://ciudad-escuela.org/seccion/".$term->slug;
+	$metaperma = "http://ciudadaniaactiva.martadero.org/seccion/".$term->slug;
 
 } elseif ( is_tag() ) {
 	$term =	$wp_query->queried_object;
@@ -66,7 +66,7 @@ if ( is_single() || is_page() && !is_front_page() ) {
 	$metadesc_tw = substr( $metadesc, 0, 200 );
 	$metatit = $term->name;
 	$metatype = "blog";
-	$metaperma = "http://ciudad-escuela.org/etiqueta/".$term->slug;
+	$metaperma = "http://ciudadaniaactiva.martadero.org/etiqueta/".$term->slug;
 
 } else {
 	$metadesc = QUINCEM_BLOGDESC;
@@ -74,7 +74,7 @@ if ( is_single() || is_page() && !is_front_page() ) {
 	$metadesc_fb = QUINCEM_BLOGDESC;
 	$metatit = QUINCEM_BLOGNAME;
 	$metatype = "website";
-	$metaimg = "http://ciudad-escuela.org/wp-content/themes/15muebles/images/quincem-imago.png";
+	$metaimg = "http://ciudadaniaactiva.martadero.org/wp-content/themes/15muebles-master/images/quincem-imago.png";
 	$metaperma = QUINCEM_BLOGURL;
 }
 ?>

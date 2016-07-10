@@ -82,6 +82,11 @@ body { padding-top: 50px; }
 #pre-navbar .active a[href="#actividad"],
 #pre-navbar .active .actividad,
 .epi-actividad {
+	background-color: #b6d4d4;
+}
+#pre-navbar .active a[href="#earner"],
+#pre-navbar .active .earner,
+.epi-earner {
 	background-color: #c7e3e3;
 }
 .archive .navbar-blog a,
@@ -168,10 +173,10 @@ body { padding-top: 50px; }
 	background-color: #b8dbdb;
 }
 #actividad {
-	background-color: #c7e3e3;
+	background-color: #b6d4d4;
 }
 #earner {
-	background-color: #d5eaea;
+	background-color: #c7e3e3;
 }
 
 #quincem-imago {

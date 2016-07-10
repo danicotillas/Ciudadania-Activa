@@ -80,7 +80,7 @@ if ( is_single() || is_page() && !is_front_page() ) {
 ?>
 
 <!-- generic meta -->
-<meta content="15muebles" name="author" />
+<meta content="mARTadero" name="author" />
 <meta name="title" content="<?php echo $metatit ?>" />
 <meta content="<?php echo $metadesc ?>" name="description" />
 <meta content="Pedagogía abierta, pedagogía urbana, pedagogía opensource, pedagogía urbana abierta, escuela abierta, Ciudad Escuela, 15muebles, Open Badges, aprendizaje no reglado, Madrid, Zuloark, Basurama, Domenico Di Siena, Alberto Corsín, Adolfo Estalella, Alfonso Sánchez Uzábal" name="keywords" />
@@ -92,7 +92,7 @@ if ( is_single() || is_page() && !is_front_page() ) {
 <meta property="og:image" content="<?php echo $metaimg; ?>" />
 <!-- twitter meta -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@15muebles">
+<meta name="twitter:site" content="@martadero">
 <meta name="twitter:title" content="<?php echo $metatit ?>">
 <meta name="twitter:description" content="<?php echo $metadesc_tw ?>">
 <meta name="twitter:creator" content="@15muebles">

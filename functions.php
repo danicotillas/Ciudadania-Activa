@@ -167,20 +167,20 @@ function quincem_create_post_type() {
 	// Módulo post type
 	register_post_type( 'badge', array(
 		'labels' => array(
-			'name' => __( 'Badges' ),
-			'singular_name' => __( 'Badge' ),
-			'add_new_item' => __( 'Añadir badge' ),
+			'name' => __( 'Parche' ),
+			'singular_name' => __( 'Parche' ),
+			'add_new_item' => __( 'Añadir parche' ),
 			'edit' => __( 'Editar' ),
-			'edit_item' => __( 'Editar este badge' ),
-			'new_item' => __( 'Nuevo badge' ),
-			'view' => __( 'Ver badge' ),
-			'view_item' => __( 'Ver este badge' ),
-			'search_items' => __( 'Buscar badges' ),
-			'not_found' => __( 'Ningún badge encontrado' ),
-			'not_found_in_trash' => __( 'Ningún badge en la papelera' ),
+			'edit_item' => __( 'Editar este parche' ),
+			'new_item' => __( 'Nuevo parche' ),
+			'view' => __( 'Ver parche' ),
+			'view_item' => __( 'Ver este parche' ),
+			'search_items' => __( 'Buscar parches' ),
+			'not_found' => __( 'Ningún parche encontrado' ),
+			'not_found_in_trash' => __( 'Ningún parche en la papelera' ),
 			'parent' => __( 'Aprende' )
 		),
-		'description' => 'A través de los Badges (Parches) irás aprendiendo distintas cosas: habilidades, saberes y herramientas que creemos importante poner en juego para construir una ciudad mejor.',
+		'description' => 'A través de los Parches irás aprendiendo distintas cosas: habilidades, saberes y herramientas que creemos importante poner en juego para construir una ciudad mejor.',
 		'has_archive' => false,
 		'public' => true,
 		'publicly_queryable' => true,
@@ -571,7 +571,7 @@ function quincem_metaboxes( $meta_boxes ) {
 	// modulos multicheckbox
 	$meta_boxes[] = array(
 		'id' => 'quincem_dependencias',
-		'title' => 'Dependencias (otros badges)',
+		'title' => 'Dependencias (otros parches)',
 		'pages' => array('badge'), // post type
 		'context' => 'side', //  'normal', 'advanced', or 'side'
 		'priority' => 'high',  //  'high', 'core', 'default' or 'low'
@@ -589,14 +589,14 @@ function quincem_metaboxes( $meta_boxes ) {
 	// Cómo ganar el badge
 	$meta_boxes[] = array(
 		'id' => 'quincem_badge_como',
-		'title' => 'Cómo ganar el badge',
+		'title' => 'Cómo ganar el parche',
 		'pages' => array('badge'), // post type
 		'context' => 'normal', //  'normal', 'advanced', or 'side'
 		'priority' => 'high',  //  'high', 'core', 'default' or 'low'
 		'show_names' => false, // Show field names on the left
 		'fields' => array(
 				array(
-					'name' => 'Cómo ganar el badge',
+					'name' => 'Cómo ganar el parche',
 					'id' => $prefix . 'badge_como',
 					'type' => 'wysiwyg',
 					'options' => array(),
@@ -990,7 +990,7 @@ function quincem_reclaim_badge_form() {
 <label for='quincem-form-badge-mail' class='col-sm-6 control-label'>Dirección de correo electrónico</label>
 <div class='col-sm-6'>
     <input class='form-control req' type='text' value='' name='quincem-form-badge-mail' />
-    <p class='help-block'><small>En el caso de que ya tengas una mochila de badges (Mozilla Backpack) <strong>esta dirección debe ser la misma de tu cuenta Persona</strong>.</small></p>
+    <p class='help-block'><small>Usa siempre la misma dirección de correo electrónico para que aparezcan todos en tu perfil.</strong>.</small></p>
 </div>
 </div>
 

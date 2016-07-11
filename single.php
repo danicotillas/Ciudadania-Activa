@@ -66,7 +66,7 @@ if ( $pt == 'itinerario' ) {
 	$single_como = get_post_meta( $post->ID, '_quincem_badge_como',true );
 	if ( $single_como != '' ) {
 		$single_como_out =
-			"<h2>Cómo ganar el badge</h2>"
+			"<h2>Cómo ganar el parche</h2>"
 			.apply_filters( 'the_content', $single_como );
 	} else { $single_como_out = ''; }
 
@@ -115,9 +115,9 @@ if ( $pt == 'itinerario' ) {
 	
 	$solicita_out = "
 		<div class='single-aside'>
-			<h3>Solicitar el badge</h3>
-			<p>Si has participado en alguna de las actividades asociadas a este badge puedes solicitar este badge para añadirlo a <a href='http://backpack.openbadges.org'>tu backpack</a>.</p>
-		<p><a class='btn-cescuela' href='/solicita-tu-badge/?badge_id=" .$post->ID. "'>Solicita este badge</a></p>
+			<h3>Solicitar el parche</h3>
+			<p>Si has participado en alguna de las actividades asociadas a este parche puedes solicitarlo para añadirlo a tu cuenta.</p>
+		<p><a class='btn-cescuela' href='/solicita-tu-badge/?badge_id=" .$post->ID. "'>Solicita este parche</a></p>
 		</div>
 	";
 
@@ -127,7 +127,7 @@ if ( $pt == 'itinerario' ) {
 	);
 	$children = get_pages($args);
 	$current_version = get_post_meta($post->ID,'_quincem_version',true);
-	$version_message = "<p class='bg-yellow'><span class='glyphicon glyphicon-exclamation-sign'></span> <strong>Versión desactualizada.</strong></p><p>Ésta es la versión ".$current_version." del badge ".get_the_title().". En el listado de versiones puedes encontrar la última versión:</p>";
+	$version_message = "<p class='bg-yellow'><span class='glyphicon glyphicon-exclamation-sign'></span> <strong>Versión desactualizada.</strong></p><p>Ésta es la versión ".$current_version." del parche ".get_the_title().". En el listado de versiones puedes encontrar la última versión:</p>";
 	$versions = "";
 
 	// if versions
@@ -140,7 +140,7 @@ if ( $pt == 'itinerario' ) {
 		);
 		$sisters = get_pages($args);
 		$s_count = count($sisters) + 1;
-		if ( $current_version == $s_count ) { $version_message = "<p class='bg-blue-top'><span class='glyphicon glyphicon-ok-sign'></span> <strong>Última versión del badge.</strong></p><p>Ésta es la versión ".$current_version." del badge ".get_the_title().".</p>"; }
+		if ( $current_version == $s_count ) { $version_message = "<p class='bg-blue-top'><span class='glyphicon glyphicon-ok-sign'></span> <strong>Última versión del parche.</strong></p><p>Ésta es la versión ".$current_version." del parche ".get_the_title().".</p>"; }
 		foreach ( $sisters as $s ) {
 			$s_perma = get_permalink($s);
 			$s_date = get_the_date('j\/m\/Y',$s->ID);
@@ -199,7 +199,7 @@ if ( $pt == 'itinerario' ) {
 
 			$issuer_out = "
 			<div class='single-aside'>
-				<h3>Ficha del emisor del badge</h3>
+				<h3>Ficha del emisor del parche</h3>
 				".$issuer_metadatas_out."
 				<a class='btn-cescuela' href='".get_permalink($i)."'>Contactar al emisor</a>
 			</div>
@@ -241,7 +241,7 @@ if ( $pt == 'itinerario' ) {
 			if ( $badge_icon_id != '' ) {
 				$badge_perma = get_permalink( $badge->ID );
 				$badge_tit = get_the_title( $badge->ID );
-				$single_icons_out .= "<li><a href='" .$badge_perma. "' title='Badge: " .$badge_tit. "'>" .wp_get_attachment_image( $badge_icon_id, 'icon' ). "</a></li>";
+				$single_icons_out .= "<li><a href='" .$badge_perma. "' title='Parche: " .$badge_tit. "'>" .wp_get_attachment_image( $badge_icon_id, 'icon' ). "</a></li>";
 			}
 		}
 		$single_icons_out .= "</ul>";
@@ -303,7 +303,7 @@ if ( has_post_thumbnail() ) { $single_logo = get_the_post_thumbnail($post->ID,$s
 		if ( $single_earners_out != '' ) { ?>
 		<section class="single-earners row hair">
 			<div class="col-md-12 col-sd-12">
-				<header><h2>Ganaron el badge</h2></header>			
+				<header><h2>Ganaron el parche</h2></header>			
 				<script type='text/javascript'>
 					jQuery(document).ready(function(){
 						jQuery(".earner-click").on('click', function() {
@@ -324,7 +324,7 @@ if ( has_post_thumbnail() ) { $single_logo = get_the_post_thumbnail($post->ID,$s
 
 		<?php // related content
 		if ( $pt == 'itinerario' ) {
-			$rel_tit = "Badges del itinerario";
+			$rel_tit = "Parches del itinerario";
 			$rel_array = get_post_meta( $post->ID, '_quincem_badges', false );
 			if ( count($rel_array) > 0 ) {
 				$rel_ids = implode(",",$rel_array[0]);
@@ -354,7 +354,7 @@ if ( has_post_thumbnail() ) { $single_logo = get_the_post_thumbnail($post->ID,$s
 			$rel_item_img_size = "small";
 
 		} elseif ( $pt == 'actividad' ) {
-			$rel_tit = "Badges de la actividad";
+			$rel_tit = "Parches de la actividad";
 			$rel_array = get_post_meta( $post->ID, '_quincem_badges', false );
 			if ( count($rel_array) > 0 ) {
 				$rel_ids = implode(",",$rel_array[0]);

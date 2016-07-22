@@ -19,12 +19,10 @@ foreach ( $badges as $badge ) {
 	$earner_badge_tit = $badge->post_title;
 	$earner_badge_slug = $badge->post_name;
 	$badge_perma = get_permalink();
-	$badge_json = "http://ciudad-escuela.org/openbadges/badge-" .$badge->post_name. ".json";
-	$badge_img = "http://ciudad-escuela.org/openbadges/images/badge-" .$badge->post_name. ".png";		
-	$earner_json_url = "http://ciudad-escuela.org/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
-	//$earner_json_url = "http://ciudad-escuela.org/openbadges/assertions/badge-pedagogias-abiertas-201.json";
-	//$earner_json_url = "http://poof.hksr.us/jeysjksz";
-	$earner_json_path = $_SERVER['DOCUMENT_ROOT'] . "/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
+	$badge_json = get_template_directory_uri(). "/openbadges/badge-" .$badge->post_name. ".json";
+	$badge_img = get_template_directory_uri(). "/openbadges/images/badge-" .$badge->post_name. ".png";
+	$earner_json_url = get_template_directory_uri(). "/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
+	$earner_json_path = get_template_directory(). "/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
 }
 
 // OBI email converter vars

@@ -108,6 +108,7 @@ foreach ( $band_pts as $band_pt ) {
 			);
 	
 			$tablet_count_pt = 4;
+			$desktop_count_pt = 6;
 
 		} elseif ( $band_pt == 'itinerario' ) {
 			$args = array(
@@ -117,7 +118,17 @@ foreach ( $band_pts as $band_pt ) {
 				'order' => 'ASC',
 			);
 			$tablet_count_pt = 3;
+			$desktop_count_pt = 6;
 
+		} elseif ( $band_pt == 'earner' ) {
+			$args = array(
+				'posts_per_page' => -1,
+				'post_type' => $band_pt,
+				'post_parent' => 0,
+				'orderby' => 'rand',
+			);
+			$tablet_count_pt = 6;
+			$desktop_count_pt = 12;
 		}
 
 		$the_query = new WP_Query( $args );
@@ -142,7 +153,7 @@ foreach ( $band_pts as $band_pt ) {
 			$desktop_count = 0;
 			while ( $the_query->have_posts() ) : $the_query->the_post();
 				if ( $tablet_count == $tablet_count_pt ) { $tablet_count = 0; echo '<div class="clearfix visible-sm"></div>';  }
-				if ( $desktop_count == 6 ) { $desktop_count = 0; echo '<div class="clearfix visible-md visible-lg"></div>';  }
+				if ( $desktop_count == $desktop_count_pt ) { $desktop_count = 0; echo '<div class="clearfix visible-md visible-lg"></div>';  }
 				$tablet_count++; $desktop_count++;
 				include "loop-mosac.php";
 
@@ -265,27 +276,9 @@ foreach ( $band_pts as $band_pt ) {
 
 	<?php } // END if ACTIVIDADES
 
-
-
-// IF EARNERS
-	if ( $band_pt != 'earner' ) {
-		$args = array(
-				'posts_per_page' => -1,
-				'post_type' => $band_pt,
-				'post_parent' => 0
-			);
-			
-	}
-
 	$band_count++;
 }
-
-
 // END bands loop
-
-
-
 ?>
-
 
 <?php get_footer(); ?>

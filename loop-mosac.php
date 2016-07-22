@@ -2,6 +2,7 @@
 
 // vars depending on the custom post type
 if ( $band_pts[$band_count] == 'itinerario' ) {
+	$item_name = get_the_title();
 	$item_subtit = "";
 	$item_date_begin = "";
 	$item_date_end = "";
@@ -13,10 +14,11 @@ if ( $band_pts[$band_count] == 'itinerario' ) {
 	if ( is_single() ) { $item_desc = get_the_content(); }
 	else { $item_desc = get_the_excerpt(); }
 	$item_img_size = "small";
-	$pt_class = "4";
-
+	$tablet_class = "4";
+	$desktop_class = "2";
 
 } elseif ( $band_pts[$band_count] == 'badge' ) {
+	$item_name = get_the_title();
 	$item_subtit = get_post_meta( $post->ID, '_quincem_subtit', true );
 
 	$item_date_begin = "";
@@ -24,27 +26,28 @@ if ( $band_pts[$band_count] == 'itinerario' ) {
 	$item_desc = "";
 	$item_icons_out = "";
 	$item_img_size = array(75,75);
-	$pt_class = "3";
+	$tablet_class = "3";
+	$desktop_class = "2";
 
 
 
 
 
 } elseif ( $band_pts[$band_count] == 'earner' ) {
-	$item_subtit = get_post_meta( $post->ID, '_quincem_icono_id', true );
-
+	$item_name = get_post_meta( $post->ID, '_quincem_earner_name', true );
+	$item_subtit = '';
 	$item_date_begin = "";
 	$item_date_end = "";
 	$item_desc = "";
 	$item_icons_out = "";
 	$item_img_size = array(75,75);
-	$pt_class = "3";
-
-
+	$tablet_class = "3";
+	$desktop_class = "1";
 
 
 
 } elseif ( $band_pts[$band_count] == 'actividad' ) {
+	$item_name = get_the_title();
 	$item_subtit = get_post_meta( $post->ID, '_quincem_escenario', true );
 
 	$item_date_begin = get_post_meta( $post->ID, '_quincem_date_begin', true );
@@ -84,20 +87,23 @@ if ( $band_pts[$band_count] == 'itinerario' ) {
 
 	$item_img_size = "small";
 	$pt_class = "3";
+	$desktop_class = "2";
 
 }
 
 // common vars for all custom post types
 	$item_perma = get_permalink();
-	$item_name = get_the_title();
 	$item_tit = "<h3 class='mosac-item-tit'><a href='" .$item_perma. "' title='" .$item_name. "' rel='bookmark'>" .$item_name. "</a></h3>";
 	if ( has_post_thumbnail() ) {
-		$item_logo = "<a href='" .$item_perma. "' title='" .$item_name. "' rel='bookmark'>" .get_the_post_thumbnail($post->ID,$item_img_size,array('class' => 'img-responsive')). "</a>"; } else { $item_logo = "";
+		$item_logo = "<a href='" .$item_perma. "' title='" .$item_name. "' rel='bookmark'>" .get_the_post_thumbnail($post->ID,$item_img_size,array('class' => 'img-responsive')). "</a>"; }
+	else {
+		if ( $band_pts[$band_count] == 'earner' ) {
+			$item_logo = "<a href='" .$item_perma. "' title='" .$item_name. "' rel='bookmark'><img src='" .QUINCEM_BLOGTHEME. "/images/quincem-earner-avatar.png' alt='Avatar por omisión en Ciudad Escuela' class'='img-responsive' /></a>"; 
+		} else { $item_logo = ""; }
 	}
-
 ?>
 
-	<article class="mosac-item aligncenter col-md-2 col-sm-<?php echo $pt_class ?>">
+	<article class="mosac-item aligncenter col-md-<?php echo $desktop_class ?> col-sm-<?php echo $tablet_class ?>">
 <div <?php post_class(); ?>>
 	<?php echo $item_logo; ?>
 	<div class="caption">

@@ -1,0 +1,16 @@
+{
+"uid": "37",
+"recipient": {
+	"type": "email",
+	"hashed": false,
+	"identity": "danicotillas@gmail.com"
+},
+"evidence": "https://www.facebook.com/comunicacionabierta.net/photos/a.465974723608624.1073741826.452549041617859/496410277231735/?type=3&theater",
+"issuedOn": "2016-07-09 21:37:03",
+"badge": "http://ciudadaniaactiva.martadero.org/openbadges/badge-archivo-vivo.json",
+"image": "http://ciudadaniaactiva.martadero.org/openbadges/images/badge-archivo-vivo.png",
+"verify": {
+	"type": "hosted",
+	"url": "http://ciudadaniaactiva.martadero.org/openbadges/assertions/badge-archivo-vivo-37.json"
+}
+}

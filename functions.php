@@ -773,7 +773,7 @@ function quincem_write_issuer_metadata() {
 		return;
 
 	if ( $post->post_type == 'issuer' && $post->post_status == 'publish' ) {
-		$issuer_json = get_template_directory() . "/openbadges/issuer-" .$post->post_name. ".json";
+		$issuer_json = $_SERVER['DOCUMENT_ROOT'] . "/openbadges/issuer-" .$post->post_name. ".json";
 
 		$issuer_url = get_post_meta($post->ID,'_quincem_issuer_url',true);
 		$issuer_email = get_post_meta( $post->ID, '_quincem_issuer_email',true );
@@ -807,8 +807,8 @@ function quincem_write_badge_metadata() {
 		return;
 
 	if ( $post->post_type == 'badge' && $post->post_status == 'publish' ) {
-		$badge_json = get_template_directory() . "/openbadges/badge-" .$post->post_name. ".json";
-		$badge_img = get_template_directory() . "/openbadges/images/badge-" .$post->post_name. ".png";
+		$badge_json = $_SERVER['DOCUMENT_ROOT'] . "/openbadges/badge-" .$post->post_name. ".json";
+		$badge_img = $_SERVER['DOCUMENT_ROOT'] . "/openbadges/images/badge-" .$post->post_name. ".png";
 
 		$perma = get_permalink($post->ID);
 		$subtit = get_post_meta( $post->ID, '_quincem_subtit',true );
@@ -824,9 +824,9 @@ function quincem_write_badge_metadata() {
 		$data = '{
 "name": "' .$post->post_title. '. ' .$subtit. '",
 "description": "' .$post->post_excerpt. '",
-"image": "' .get_template_directory_uri(). '/openbadges/images/badge-' .$post->post_name. '.png",
+"image": "http://ciudadaniaactiva.martadero.org/openbadges/images/badge-' .$post->post_name. '.png",
 "criteria": "' .$perma. '",
-"issuer": "' .get_template_directory_uri(). '/openbadges/issuer-'.$issuer_slug.'.json"
+"issuer": "http://ciudadaniaactiva.martadero.org/openbadges/issuer-'.$issuer_slug.'.json"
 }';
 
 		// json metadata file
@@ -877,13 +877,10 @@ function quincem_earner_admited() {
 			$earner_badge_tit = $badge->post_title;
 			$earner_badge_slug = $badge->post_name;
 			$badge_perma = get_permalink($badge->ID);
-			/*
-			 * badge info is requested from theme openbadges folder through http
-			 */
-			$badge_json = get_template_directory_uri(). "/openbadges/badge-" .$badge->post_name. ".json";
-			$badge_img = get_template_directory_uri(). "/openbadges/images/badge-" .$badge->post_name. ".png";
-			$earner_json_url = get_template_directory_uri(). "/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
-			$earner_json_path = get_template_directory() . "/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
+			$badge_json = "http://ciudadaniaactiva.martadero.org/openbadges/badge-" .$badge->post_name. ".json";
+			$badge_img = "http://ciudadaniaactiva.martadero.org/openbadges/images/badge-" .$badge->post_name. ".png";		
+			$earner_json_url = "http://ciudadaniaactiva.martadero.org/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
+			$earner_json_path = $_SERVER['DOCUMENT_ROOT'] . "/openbadges/assertions/badge-" .$badge->post_name. "-" .$post->ID. ".json";
 
 			$badge_issuer = get_post_meta($badge->ID,'_quincem_issuer',true);
 			$args = array(

@@ -271,7 +271,7 @@ foreach ( $band_pts as $band_pt ) {
 	if ( $band_pt != 'earner' ) {
 		$args = array(
 				'posts_per_page' => -1,
-				'post_type' => $band_earner,
+				'post_type' => $band_pt,
 				'post_parent' => 0
 			);
 			

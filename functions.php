@@ -923,11 +923,11 @@ function quincem_earner_admited() {
 		// notificate user when badge application is admited
 		if ( $write_success != FALSE ) {
 			$to = $earner_mail;
-			$subject = "Has ganado el badge " .$earner_badge_tit;
+			$subject = "Has ganado el parche " .$earner_badge_tit;
 			$message = '
 ¡Enhorabuena ' .$earner_name. '!'
 . "\r\n\r\n" .
-'has ganado el badge ' .$earner_badge_tit. ' por tu participación en la actividad ' .$earner_actividad. '.'
+'has ganado el parche ' .$earner_badge_tit. ' por tu participación en la actividad ' .$earner_actividad. '.'
 . "\r\n\r\n" .
 'Para añadirlo a tu mochila, y poder así mostrárselo al mundo, puedes visitar el siguiente enlace: ' .$earner_perma. '.'
 . "\r\n\r\n" .
@@ -1240,7 +1240,7 @@ function quincem_insert_earner() {
 
 	// send confirmation mail to earner
 	$to = $earner_mail;
-	$subject = "Solicitud de concesión de badge de Ciudadanía Activa";
+	$subject = "Solicitud de concesión de parche de Ciudadanía Activa";
 	$message = '
 Hola ' .$earner_name. ','
 . "\r\n\r\n" .
@@ -1261,11 +1261,11 @@ Hola ' .$earner_name. ','
 
 	// send notification mail to issuer
 	$to = $issuer_notifica_email;
-	$subject = "[badges] Solicitud de emisión de badge";
+	$subject = "[badges] Solicitud de emisión de parche";
 	$message = '
 Hola ' .$issuer_name.','
 . "\r\n\r\n" .
-'un usuario ha solicitado uno de tus badge a través del sistema de emisión de Ciudadanía Activa. Aquí puedes ver sus datos:'
+'un usuario ha solicitado uno de tus parches a través del sistema de emisión de Ciudadanía Activa. Aquí puedes ver sus datos:'
 . "\r\n\r\n" .
 '+ Nombre del solicitante: ' .$earner_name.
 "\r\n" .
@@ -1277,7 +1277,7 @@ Hola ' .$issuer_name.','
 "\r\n" .
 '+ URL del material producido: ' .$earner_material.
 "\r\n\r\n" .
-'Si es la primera vez que recibes una solicitud de emisión de badge Ciudadanía Activa puedes leer las siguientes instrucciones para gestionar esta solicitud:'.
+'Si es la primera vez que recibes una solicitud de emisión de parche Ciudadanía Activa puedes leer las siguientes instrucciones para gestionar esta solicitud:'.
 "\r\n\r\n" .
 '1. Comprueba los datos del solicitante y el material que ha generado, para asegurarte de que cumple los requisitos.'.
 "\r\n" .

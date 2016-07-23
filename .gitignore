@@ -13,3 +13,9 @@ wp-content/backups/
 sitemap.xml.gz
 
 *.psd
+
+openbadges/assertions/badge-clementina-71.json
+
+openbadges/badge-clementina.json
+
+openbadges/badge-mi-primer-parche.json
